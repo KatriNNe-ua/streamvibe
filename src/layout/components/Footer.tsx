@@ -1,16 +1,23 @@
 import type { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { frontRoutes } from "../../routes/frontRoutes";
-import { socialLinks } from "../../data/socialData";
+import { footerMenuLinks, socialLinks } from "../../data/socialData";
 import { HashLink } from "react-router-hash-link";
 
+// function scrollWithOffset(el: HTMLElement) {
+//   const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
+//   const offset = window.innerHeight * 0.3;
+//   window.scrollTo({ top: yCoordinate - offset, behavior: "smooth" });
+// }
 function scrollWithOffset(el: HTMLElement) {
   const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
-  const offset = window.innerHeight * 0.3;
-  window.scrollTo({ top: yCoordinate - offset, behavior: "smooth" });
+  const offset = window.innerHeight * 0.3; // 30% від висоти екрану
+  // на мобільних можна зробити трохи більше
+  const isMobile = window.innerWidth < 768;
+  const finalOffset = isMobile ? window.innerHeight * 0.35 : offset;
+
+  window.scrollTo({ top: yCoordinate - finalOffset, behavior: "smooth" });
 }
-
-
 const homeLinks = [
   { label: "Categories", to: `${frontRoutes.navigator.home}#categories` },
   { label: "Devices", to: `${frontRoutes.navigator.home}#devices`},
@@ -180,11 +187,14 @@ function Footer(): ReactElement {
             <p>@2023 streamvib, All Rights Reserved</p>
           </div>
           <ul className="footer__menu">
-            <li>
-              <a href="#" className="footer__item footer__item--line">
-                Terms of Use
-              </a>
-            </li>
+            {footerMenuLinks.map((item) => (
+              <li key={item.id}>
+                <a href={item.href} className={item.className}>
+                 {item.label}
+                </a>
+              </li>
+            ))}
+
             <li>
               <a href="#" className="footer__item footer__item--line">
                 Privacy Policy

@@ -18,3 +18,24 @@ export const socialLinks = [
     iconClass: "-icon-linkedin",
   },
 ];
+
+export const footerMenuLinks = [
+  {
+    id: "terms",
+    label: "Terms of Use",
+    href: "#",
+    className: "footer__item footer__item--line",
+  },
+  {
+    id: "privacy",
+    label: "Privacy Policy",
+    href: "#",
+    className: "footer__item footer__item--line",
+  },
+  {
+    id: "cookie",
+    label: "Cookie Policy",
+    href: "#",
+    className: "footer__item",
+  },
+];
