@@ -1,0 +1,93 @@
+@use "./mixins" as *;
+
+.compare {
+	// .compare__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(40);
+		@media ((min-width: toEm(768)) and (max-width: toEm(1629.98))) {
+			gap: toRem(60);
+		}
+		@media (min-width: toEm(1630)) {
+			gap: toRem(80);
+		}
+	}
+
+	// .compare__section-header
+
+	&__section-header {
+	}
+
+	// .compare__table
+
+	&__table {
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		& th,
+		& td {
+			width: 25%;
+			@media ((min-width: toEm(768)) and (max-width: toEm(1629.98))) {
+				padding: toRem(24);
+			}
+			@media (min-width: toEm(1630)) {
+				padding: toRem(30);
+			}
+		}
+	}
+
+	// .compare__item
+
+	&__item {
+		border: toRem(1) solid var(--border-color);
+		@media ((min-width: toEm(768)) and (max-width: toEm(1629.98))) {
+			padding: toRem(24);
+		}
+		@media (min-width: toEm(1630)) {
+			padding: toRem(30);
+		}
+	}
+
+	// .compare__item--main
+
+	&__item--main {
+		color: var(--white-color);
+		background-color: var(--dark-color-2);
+		font-weight: 600;
+		font-size: toRem(20);
+		text-align: start;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+		& .switcher {
+			justify-content: space-evenly;
+		}
+	}
+	&__card {
+		border-radius: toRem(8);
+		border: toRem(1) solid var(--dark-color-4);
+		background: var(--dark-color-2);
+		padding: toRem(24);
+		gap: toRem(24);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		// grid-auto-flow: dense;
+	}
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(4);
+		&--span {
+			grid-column: span 2;
+		}
+	}
+	&__value {
+		color: var(--white-color);
+	}
+}
