@@ -4523,20 +4523,8 @@ textarea:-webkit-autofill {
           align-items: center;
   gap: 0.25rem;
 }
-@media (min-width: 101.6875em) {
-  .reviews__slide {
-    min-height: 16.5625rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 101.6875em) {
-  .reviews__slide {
-    min-height: clamp( 13.375rem , 12.5945868401rem  +  3.9020657995vw , 16.5625rem );
-  }
-}
-@media (max-width: 20em) {
-  .reviews__slide {
-    min-height: 13.375rem;
-  }
+.reviews__slide {
+  min-height: 16.5625rem;
 }
 @media (min-width: 101.6875em) {
   .reviews__slide {

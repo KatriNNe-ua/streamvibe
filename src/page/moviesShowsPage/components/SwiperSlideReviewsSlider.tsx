@@ -4,7 +4,7 @@ import type { Review } from "../../../data/dataDB";
 import Rating from "../../components/Rating";
 
 type Props = {
-  review: Review;
+  review: Review; 
 };
 
 function SwiperSlideReviewsSlider({ review }:Props): ReactElement {

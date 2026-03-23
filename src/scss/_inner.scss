@@ -693,7 +693,7 @@
 	}
 	// .reviews__slide
 	&__slide {
-		@include adaptiveValue("min-height", 265, 214);
+		min-height: toRem(265);
 		@include adaptiveValue("padding", 40, 24);
 		border-radius: toRem(12);
 		border: toRem(1) solid var(--dark-color-4);
