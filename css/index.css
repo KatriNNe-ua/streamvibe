@@ -432,6 +432,18 @@ body.menu-open, body.open-popup {
             transform: rotate(1turn);
   }
 }
+#genresM,
+#popularM,
+#trendingM,
+#newM,
+#watchM,
+#genresS,
+#popularS,
+#trendingS,
+#newS {
+  scroll-margin-top: 30vh;
+}
+
 .header {
   position: fixed;
   top: 0;
