@@ -58,7 +58,7 @@ function Aside({item}:Props): ReactElement {
        <h3 className="director__header">Director</h3>
        <div className="director__body">
          <div className="director__img">
-           <img src="/images/data/person/1.jpg" alt="image" />
+           <img src="/images/data/person/1.webp" alt="image" />
          </div>
          <div className="director__name">
            {item.director.name}
@@ -70,7 +70,7 @@ function Aside({item}:Props): ReactElement {
        <h3 className="director__header">Music</h3>
        <div className="director__body">
          <div className="director__img">
-           <img src="/images/data/person/2.jpg" alt="image" />
+           <img src="/images/data/person/2.webp" alt="image" />
          </div>
          <div className="director__name">
            {item.music.name}
